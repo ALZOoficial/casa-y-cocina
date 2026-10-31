@@ -93,8 +93,10 @@ document.fonts?.ready.then(fitTitle);
 window.addEventListener('resize', fitTitle);
 
 // vídeo de Seedance: versión vertical en móvil
-if (mobile) video.poster = video.dataset.posterMobile;
-video.src = mobile ? video.dataset.srcMobile : video.dataset.srcDesktop;
+// rutas relativas a la base (la web puede vivir en una subcarpeta, p. ej. GitHub Pages)
+const asset = (p) => import.meta.env.BASE_URL + p.replace(/^\//, '');
+if (mobile) video.poster = asset(video.dataset.posterMobile);
+video.src = asset(mobile ? video.dataset.srcMobile : video.dataset.srcDesktop);
 if (reduced) { video.removeAttribute('autoplay'); video.pause(); }
 
 if (!reduced) {
