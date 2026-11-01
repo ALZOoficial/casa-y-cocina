@@ -116,23 +116,26 @@ if (!reduced) {
     .fromTo(photo, { clipPath: 'inset(0% 42% 0% 42%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'power3.inOut', clearProps: 'clipPath' }, 0.45)
     .fromTo(video, { scale: 1.18 }, { scale: 1, duration: 1.9, ease: 'power2.out' }, 0.45);
 
-  // al bajar, una persiana metálica (como la de la fachada) cierra el escaparate;
-  // después la sección de la tienda, en blanco, sube por encima
-  const shutter = op.querySelector('.op__shutter');
-  // la persiana se mueve directamente con el progreso del scroll (el CSS la deja recogida arriba)
-  const ease = gsap.parseEase('power1.inOut');
-  const moveShutter = (p) => {
-    const k = ease(Math.min(1, Math.max(0, (p - 0.1) / 0.85)));
-    shutter.style.transform = `translateY(${(-100 + k * 100).toFixed(2)}%)`;
-  };
+  // al bajar, la cámara del vídeo avanza hacia la olla: el scroll controla el tiempo del vídeo
+  // (codificado con todos los fotogramas clave para que avance fino) y al final hace zoom sobre la olla
+  let fromT = 0, scrubbing = false, rafSeek = 0, wantT = 0;
+  const seek = () => { rafSeek = 0; if (Math.abs(video.currentTime - wantT) > 0.02) video.currentTime = wantT; };
   gsap.timeline({
     scrollTrigger: {
-      trigger: '.opwrap', start: 'top top', end: () => '+=' + window.innerHeight * 0.9, scrub: 0.5, invalidateOnRefresh: true,
-      onUpdate: (st) => moveShutter(st.progress),
+      trigger: '.opwrap', start: 'top top', end: () => '+=' + window.innerHeight * 1.2, scrub: 0.6, invalidateOnRefresh: true,
+      onUpdate: (st) => {
+        const p = st.progress;
+        if (p > 0.002 && !scrubbing) { scrubbing = true; fromT = video.currentTime; video.pause(); }
+        if (p <= 0.002 && scrubbing) { scrubbing = false; video.currentTime = fromT; video.play().catch(() => {}); return; }
+        if (!scrubbing || !video.duration) return;
+        wantT = fromT + Math.min(1, p / 0.8) * (video.duration - 0.05 - fromT);
+        if (!rafSeek) rafSeek = requestAnimationFrame(seek);
+      },
     },
   })
     // valores de partida explícitos: sin ellos GSAP interpola desde "filter: none" y el vídeo salta a negro
-    .fromTo(video, { scale: 1, filter: 'brightness(1) saturate(1)' }, { scale: 1.08, filter: 'brightness(0.55) saturate(1.1)', ease: 'none', duration: 1, immediateRender: false }, 0)
+    .fromTo(video, { scale: 1, filter: 'brightness(1) saturate(1)' }, { scale: 1.12, filter: 'brightness(0.95) saturate(1.05)', ease: 'none', duration: 0.75, immediateRender: false }, 0)
+    .to(video, { scale: 2.1, filter: 'brightness(0.7) saturate(1.1)', ease: 'power2.in', duration: 0.25 }, 0.75)
     .fromTo(w1, { xPercent: 0 }, { xPercent: () => (mobile ? -40 : -70), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
     .fromTo(w2, { xPercent: 0 }, { xPercent: () => (mobile ? 40 : 55), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
     .fromTo(amp, { scale: 1 }, { scale: 1.5, ease: 'none', duration: 1, immediateRender: false }, 0);

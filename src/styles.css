@@ -182,20 +182,13 @@ main > section, main > div, .footer { position: relative; z-index: 1; }
 .op__ctas { display: flex; align-items: center; gap: 22px; }
 .op__ctas .btn { background: var(--granate); }
 .op__photo { position: relative; flex: 1; min-height: 0; overflow: hidden; }
-.op__video { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 40%; }
-/* persiana metálica como la de la fachada: lamas negras que bajan sobre el escaparate */
-.op__shutter {
-  position: absolute; inset: 0; transform: translateY(-100%);
-  background: repeating-linear-gradient(to bottom, #1f1c1b 0 20px, #2a2625 20px 21px, #0e0c0b 21px 24px);
-  box-shadow: 0 10px 30px rgb(0 0 0 / 0.5);
-}
-.op__shutter-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 14px; background: linear-gradient(#3a3533, #161414); border-top: 1px solid #4a4442; }
+.op__video { width: 100%; height: 100%; object-fit: cover; transform-origin: 52% 50%; /* la olla, al final del vídeo */ }
 
 /* ---------- La tienda (cúpula granate) ---------- */
 .dome {
   position: relative; z-index: 2;
   min-height: 100vh; padding: clamp(110px, 18vh, 200px) 0 clamp(60px, 10vh, 120px);
-  margin-top: 80vh; /* deja bajar la persiana antes de que suba esta sección */
+  margin-top: 110vh; /* deja hacer el acercamiento a la olla antes de que suba esta sección */
   background: var(--blanco); color: var(--tinta);
   overflow: hidden;
 }
