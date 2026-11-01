@@ -24,6 +24,10 @@ document.querySelectorAll('[data-logo]').forEach((el) => { el.innerHTML = logoSv
 initIcons();
 initLang();
 
+// la intro empieza siempre arriba (salvo que el enlace apunte a una sección, p. ej. #catalogo)
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (!location.hash) window.scrollTo(0, 0);
+
 // ---------- Scroll suave ----------
 let lenis = null;
 if (!reduced) {
@@ -135,7 +139,7 @@ if (!reduced) {
   })
     // valores de partida explícitos: sin ellos GSAP interpola desde "filter: none" y el vídeo salta a negro
     .fromTo(video, { scale: 1, filter: 'brightness(1) saturate(1)' }, { scale: 1.12, filter: 'brightness(0.95) saturate(1.05)', ease: 'none', duration: 0.75, immediateRender: false }, 0)
-    .to(video, { scale: 2.1, filter: 'brightness(0.7) saturate(1.1)', ease: 'power2.in', duration: 0.25 }, 0.75)
+    .to(video, { scale: 1.45, filter: 'brightness(0.8) saturate(1.08)', ease: 'power2.in', duration: 0.25 }, 0.75) // zoom contenido: el vídeo es 1080p y más aumento lo emborrona
     .fromTo(w1, { xPercent: 0 }, { xPercent: () => (mobile ? -40 : -70), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
     .fromTo(w2, { xPercent: 0 }, { xPercent: () => (mobile ? 40 : 55), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
     .fromTo(amp, { scale: 1 }, { scale: 1.5, ease: 'none', duration: 1, immediateRender: false }, 0);
