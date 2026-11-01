@@ -183,12 +183,20 @@ main > section, main > div, .footer { position: relative; z-index: 1; }
 .op__ctas .btn { background: var(--granate); }
 .op__photo { position: relative; flex: 1; min-height: 0; overflow: hidden; }
 .op__video { width: 100%; height: 100%; object-fit: cover; transform-origin: 50% 40%; }
+/* persiana metálica como la de la fachada: lamas negras que bajan sobre el escaparate */
+.op__shutter {
+  position: absolute; inset: 0; transform: translateY(-100%);
+  background: repeating-linear-gradient(to bottom, #1f1c1b 0 20px, #2a2625 20px 21px, #0e0c0b 21px 24px);
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.5);
+}
+.op__shutter-bar { position: absolute; left: 0; right: 0; bottom: 0; height: 14px; background: linear-gradient(#3a3533, #161414); border-top: 1px solid #4a4442; }
 
 /* ---------- La tienda (cúpula granate) ---------- */
 .dome {
   position: relative; z-index: 2;
   min-height: 100vh; padding: clamp(110px, 18vh, 200px) 0 clamp(60px, 10vh, 120px);
-  background: var(--granate); color: var(--blanco);
+  margin-top: 80vh; /* deja bajar la persiana antes de que suba esta sección */
+  background: var(--blanco); color: var(--tinta);
   overflow: hidden;
 }
 .dome__inner { width: var(--wrap); margin: 0 auto; text-align: center; display: grid; justify-items: center; }
@@ -198,8 +206,8 @@ main > section, main > div, .footer { position: relative; z-index: 1; }
   font-size: clamp(1.5rem, 0.9rem + 2.4vw, 3.1rem); line-height: 1.12; letter-spacing: 0.01em; text-transform: uppercase;
   text-wrap: balance;
 }
-.dome__hand { margin: clamp(18px, 3vh, 34px) 0 0; font-family: var(--f-hand); font-size: clamp(1.8rem, 1.2rem + 2.6vw, 3.6rem); color: var(--roble); rotate: -4deg; }
-.ribbon { margin-top: clamp(60px, 10vh, 120px); overflow: hidden; white-space: nowrap; border-block: 1px solid rgb(251 248 243 / 0.25); padding: 0.18em 0; }
+.dome__hand { margin: clamp(18px, 3vh, 34px) 0 0; font-family: var(--f-hand); font-size: clamp(1.8rem, 1.2rem + 2.6vw, 3.6rem); color: var(--granate); rotate: -4deg; }
+.ribbon { margin-top: clamp(60px, 10vh, 120px); overflow: hidden; white-space: nowrap; border-block: 1px solid var(--linea); padding: 0.18em 0; }
 .ribbon__track {
   display: inline-block; padding-left: 4vw;
   font-family: var(--f-wide); font-stretch: 125%; font-weight: 800; text-transform: uppercase;
@@ -456,6 +464,7 @@ main > section, main > div, .footer { position: relative; z-index: 1; }
   .lift, [data-window] { clip-path: none; translate: none; }
   [data-window] img { scale: 1; }
   .op { position: relative; }
+  .dome { margin-top: 0; }
 }
 
 /* ---------- Estado de la tienda en el inicio ---------- */

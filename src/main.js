@@ -116,31 +116,30 @@ if (!reduced) {
     .fromTo(photo, { clipPath: 'inset(0% 42% 0% 42%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'power3.inOut', clearProps: 'clipPath' }, 0.45)
     .fromTo(video, { scale: 1.18 }, { scale: 1, duration: 1.9, ease: 'power2.out' }, 0.45);
 
-  // la sección granate sube como una cúpula mientras el inicio se oscurece
-  const dome = document.querySelector('.dome');
-  const geo = { rx: 0, ry: 0 };
-  const measure = () => { const w = dome.clientWidth, h = window.innerHeight; geo.rx = w * (w < 760 ? 0.62 : 0.55); geo.ry = h * 0.9; };
-  const shape = (p) => {
-    if (p >= 0.999) { dome.style.clipPath = 'none'; return; }
-    const k = Math.max(0, p - 0.55) / 0.45;
-    const g = 1 + 80 * k * k * k;
-    dome.style.clipPath = `ellipse(${(geo.rx * g).toFixed(1)}px ${(geo.ry * g).toFixed(1)}px at 50% ${(geo.ry * g).toFixed(1)}px)`;
+  // al bajar, una persiana metálica (como la de la fachada) cierra el escaparate;
+  // después la sección de la tienda, en blanco, sube por encima
+  const shutter = op.querySelector('.op__shutter');
+  // la persiana se mueve directamente con el progreso del scroll (el CSS la deja recogida arriba)
+  const ease = gsap.parseEase('power1.inOut');
+  const moveShutter = (p) => {
+    const k = ease(Math.min(1, Math.max(0, (p - 0.1) / 0.85)));
+    shutter.style.transform = `translateY(${(-100 + k * 100).toFixed(2)}%)`;
   };
-  measure();
-  shape(0);
   gsap.timeline({
     scrollTrigger: {
-      trigger: dome, start: 'top bottom', end: 'top top', scrub: 0.4, invalidateOnRefresh: true,
-      onRefresh: (st) => { measure(); shape(st.progress); },
-      onUpdate: (st) => shape(st.progress),
+      trigger: '.opwrap', start: 'top top', end: () => '+=' + window.innerHeight * 0.9, scrub: 0.5, invalidateOnRefresh: true,
+      onUpdate: (st) => moveShutter(st.progress),
     },
   })
     // valores de partida explícitos: sin ellos GSAP interpola desde "filter: none" y el vídeo salta a negro
-    .fromTo(video, { scale: 1, filter: 'brightness(1) saturate(1)' }, { scale: 1.14, filter: 'brightness(0.45) saturate(1.15)', ease: 'none', duration: 1, immediateRender: false }, 0)
+    .fromTo(video, { scale: 1, filter: 'brightness(1) saturate(1)' }, { scale: 1.08, filter: 'brightness(0.55) saturate(1.1)', ease: 'none', duration: 1, immediateRender: false }, 0)
     .fromTo(w1, { xPercent: 0 }, { xPercent: () => (mobile ? -40 : -70), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
     .fromTo(w2, { xPercent: 0 }, { xPercent: () => (mobile ? 40 : 55), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
-    .fromTo(amp, { scale: 1 }, { scale: 1.5, ease: 'none', duration: 1, immediateRender: false }, 0)
-    .fromTo('.dome__inner', { y: () => window.innerHeight * 0.16 }, { y: 0, ease: 'none', duration: 0.8 }, 0.2);
+    .fromTo(amp, { scale: 1 }, { scale: 1.5, ease: 'none', duration: 1, immediateRender: false }, 0);
+  gsap.fromTo('.dome__inner', { y: () => window.innerHeight * 0.12, opacity: 0 }, {
+    y: 0, opacity: 1, ease: 'none',
+    scrollTrigger: { trigger: '.dome', start: 'top bottom', end: 'top 35%', scrub: 0.5 },
+  });
 
   // cinta de texto que se desliza
   gsap.fromTo('.ribbon__track', { xPercent: 10 }, { xPercent: -40, ease: 'none', scrollTrigger: { trigger: '.ribbon', start: 'top bottom', end: 'bottom top', scrub: 0.6 } });
