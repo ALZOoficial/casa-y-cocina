@@ -135,7 +135,8 @@ if (!reduced) {
       onUpdate: (st) => shape(st.progress),
     },
   })
-    .to(video, { scale: 1.14, filter: 'brightness(0.45) saturate(1.15)', ease: 'none', duration: 1 }, 0)
+    // valores de partida explícitos: sin ellos GSAP interpola desde "filter: none" y el vídeo salta a negro
+    .fromTo(video, { scale: 1, filter: 'brightness(1) saturate(1)' }, { scale: 1.14, filter: 'brightness(0.45) saturate(1.15)', ease: 'none', duration: 1, immediateRender: false }, 0)
     .fromTo(w1, { xPercent: 0 }, { xPercent: () => (mobile ? -40 : -70), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
     .fromTo(w2, { xPercent: 0 }, { xPercent: () => (mobile ? 40 : 55), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
     .fromTo(amp, { scale: 1 }, { scale: 1.5, ease: 'none', duration: 1, immediateRender: false }, 0)
