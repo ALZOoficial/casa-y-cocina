@@ -181,17 +181,24 @@ main > section, main > div, .footer { position: relative; z-index: 1; }
 .op__tag--r { text-align: right; }
 .op__ctas { display: flex; align-items: center; gap: 22px; }
 .op__ctas .btn { background: var(--granate); }
-.op__photo { position: relative; flex: 1; min-height: 0; overflow: hidden; }
-.op__video { width: 100%; height: 100%; object-fit: cover; transform-origin: 52% 50%; /* la olla, al final del vídeo */ }
+.op__head { position: relative; z-index: 1; will-change: transform, opacity; }
+/* la torre de platos ocupa toda la pantalla por detrás; main.js la recorta bajo el título
+   y, al bajar, la abre a pantalla completa mientras el scroll recorre el vídeo */
+.op__photo { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
+.op__video { width: 100%; height: 100%; object-fit: cover; }
+.op__veil { position: absolute; inset: 0; background: var(--granate-osc); opacity: 0; pointer-events: none; }
 
-/* ---------- La tienda (cúpula granate) ---------- */
+/* ---------- La tienda (sobre el granate del último plato) ---------- */
 .dome {
   position: relative; z-index: 2;
   min-height: 100vh; padding: clamp(110px, 18vh, 200px) 0 clamp(60px, 10vh, 120px);
-  margin-top: 110vh; /* deja hacer el acercamiento a la olla antes de que suba esta sección */
-  background: var(--blanco); color: var(--tinta);
+  margin-top: 300vh; /* recorrido del scroll por la torre de platos antes de que suba esta sección */
+  background: var(--granate-osc); color: var(--blanco);
   overflow: hidden;
 }
+.dome .eyebrow { color: var(--roble); }
+.dome .dome__hand { color: var(--roble); }
+.dome .ribbon { border-color: rgb(251 248 243 / 0.2); }
 .dome__inner { width: var(--wrap); margin: 0 auto; text-align: center; display: grid; justify-items: center; }
 .dome__statement {
   margin: 0; max-width: 30ch;

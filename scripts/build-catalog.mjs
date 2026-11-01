@@ -7,15 +7,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { readXlsx } from './xlsx-read.mjs';
 import { CATEGORIAS, EJEMPLARES } from './catalog-config.mjs';
+import { EJEMPLARES_WEB } from './catalog-web.mjs';
 
 const excel = process.argv[2] ?? path.resolve('..', 'CASA&COCINA LISTADO ARTÍCULOS.xlsx');
 const rows = readXlsx(excel);
 const head = rows[0];
 const col = (name) => Object.keys(head).find((k) => head[k] === name);
-const C_DESC = col('Descripción'), C_FAM = col('Familias'), C_PVP = col('Pvp Tarifa General');
+const C_DESC = col('Descripción'), C_FAM = col('Familias'), C_PVP = col('Pvp Tarifa General'), C_EAN = col('Codigo de Barras');
 
 const items = rows.slice(1)
-  .map((r) => ({ desc: String(r[C_DESC] ?? '').replace(/\s+/g, ' ').trim(), fam: String(r[C_FAM] ?? '').trim(), pvp: Number(r[C_PVP]) || 0 }))
+  .map((r) => ({ desc: String(r[C_DESC] ?? '').replace(/\s+/g, ' ').trim(), fam: String(r[C_FAM] ?? '').trim(), pvp: Number(r[C_PVP]) || 0, ean: String(r[C_EAN] ?? '').trim() }))
   .filter((it) => it.desc && it.pvp > 0);
 
 const famToCat = new Map();
@@ -69,14 +70,16 @@ items.forEach((it) => { if (famToCat.has(it.fam)) counts[famToCat.get(it.fam)]++
 
 function desde(p) {
   if (!p) return null;
-  const rs = items.filter((it) => p.re.test(it.desc.toUpperCase()) && (!p.fam || p.fam.includes(it.fam)));
-  if (!rs.length) { console.warn('  sin coincidencias para', p.re); return null; }
+  const rs = p.ean ? items.filter((it) => it.ean === p.ean)
+    : items.filter((it) => p.re.test(it.desc.toUpperCase()) && (!p.fam || p.fam.includes(it.fam)));
+  if (!rs.length) { console.warn('  sin coincidencias para', p.ean ?? p.re); return null; }
   return Math.min(...rs.map((r) => r.pvp));
 }
 
 const categorias = CATEGORIAS.map((c, i) => ({
   id: c.id, es: c.es, en: c.en, img: c.img, articulos: counts[i],
-  ejemplares: (EJEMPLARES[c.id] ?? []).map((e) => ({ marca: e.marca, es: e.es, en: e.en, img: e.img, desde: desde(e.precio) })),
+  // primero las fotos reales de la tienda, después las de internet
+  ejemplares: [...(EJEMPLARES[c.id] ?? []), ...(EJEMPLARES_WEB[c.id] ?? [])].map((e) => ({ marca: e.marca, es: e.es, en: e.en, img: e.img, desde: desde(e.precio) })),
 }));
 
 fs.mkdirSync('src/data', { recursive: true });

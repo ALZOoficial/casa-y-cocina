@@ -8,6 +8,23 @@ Vídeo de ambiente (no muestra productos de la tienda), 10 s, 1080p, 16:9:
 higgsfield generate create seedance_2_0 --prompt "Slow cinematic dolly-in through a warm Mediterranean home kitchen at golden hour. Steam rises gently from an enamel cooking pot on a gas stove, light oak wooden shelves with white ceramic bowls, a deep burgundy painted wall, soft late-afternoon sunlight through a window, linen cloth and lemons on the counter. Shallow depth of field, 35mm lens, warm terracotta and cream tones, calm and homely, photoreal, uninhabited, plain unbranded objects." --duration 10 --resolution 1080p --aspect_ratio 16:9 --generate_audio false --wait
 ```
 
+## Intro de la torre de platos (`public/video/torre.mp4`, `torre-movil.mp4`)
+
+Vídeo controlado por el scroll: la cámara baja por una torre de platos y acaba en un plato granate que da paso a
+«La tienda». Fotogramas inicial y final con GPT Image 2.5 (16:9 y 9:16, quality high) y vídeo con Seedance 2.5:
+
+```bash
+higgsfield generate create seedance_2_5 --mode omni_reference --start-image start_16x9.png --end-image end_16x9.png --duration 10 --resolution 1080p --aspect_ratio 16:9 --generate_audio false --bitrate_mode high --wait \
+  --prompt "One continuous, perfectly smooth vertical camera move with no cuts: the camera starts level with the top of a very tall stack of handmade ceramic plates and slowly descends straight down along the side of the stack, plate after plate gliding past in bone white, olive green, terracotta and oak brown glazes, the warm blurred shop interior behind. As it nears the bottom the plates become deep burgundy red, and the camera gently pushes in until the burgundy glaze fills the whole frame. Steady elevator-like motion at constant speed, the stack stays perfectly still and solid, no plates move, warm golden light, shallow depth of field, photoreal, no people, no text."
+```
+
+Para la web, todos los fotogramas clave (`-g 1`) para que el scroll pueda moverse a cualquier instante sin tirones:
+
+```bash
+ffmpeg -i vid_16x9.mp4 -vf "scale=1600:-2,format=yuv420p" -an -c:v libx264 -preset slow -crf 24 -g 1 -tune film -movflags +faststart public/video/torre.mp4
+ffmpeg -i vid_9x16.mp4 -vf "scale=720:-2,format=yuv420p" -an -c:v libx264 -preset slow -crf 25 -g 1 -tune film -movflags +faststart public/video/torre-movil.mp4
+```
+
 ## Secciones del catálogo (`public/video/cat/<id>.mp4`)
 
 Cada vídeo parte de una FOTO REAL de la tienda (recorte 16:9 como primer fotograma) y Seedance solo añade

@@ -101,7 +101,12 @@ window.addEventListener('resize', fitTitle);
 const asset = (p) => import.meta.env.BASE_URL + p.replace(/^\//, '');
 if (mobile) video.poster = asset(video.dataset.posterMobile);
 video.src = asset(mobile ? video.dataset.srcMobile : video.dataset.srcDesktop);
-if (reduced) { video.removeAttribute('autoplay'); video.pause(); }
+
+// la foto empieza justo bajo el título (recorte superior = alto de la cabecera)
+const head = op.querySelector('.op__head');
+const headH = () => head.offsetHeight;
+photo.style.clipPath = `inset(${headH()}px 0% 0% 0%)`;
+if (reduced) window.addEventListener('resize', () => { photo.style.clipPath = `inset(${headH()}px 0% 0% 0%)`; });
 
 if (!reduced) {
   amp.classList.add('is-off');
@@ -117,32 +122,35 @@ if (!reduced) {
     .call(() => amp.classList.add('is-off'), null, 0.8)
     .call(() => amp.classList.remove('is-off'), null, 0.98)
     .from('.op__meta > *', { yPercent: 40, opacity: 0, duration: 1.2, stagger: 0.1 }, 0.5)
-    .fromTo(photo, { clipPath: 'inset(0% 42% 0% 42%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'power3.inOut', clearProps: 'clipPath' }, 0.45)
+    // la entrada recorta el vídeo; el recorte superior del contenedor lo lleva el scroll
+    .fromTo(video, { clipPath: 'inset(0% 42% 0% 42%)' }, { clipPath: 'inset(0% 0% 0% 0%)', duration: 1.4, ease: 'power3.inOut', clearProps: 'clipPath' }, 0.45)
     .fromTo(video, { scale: 1.18 }, { scale: 1, duration: 1.9, ease: 'power2.out' }, 0.45);
 
-  // al bajar, la cámara del vídeo avanza hacia la olla: el scroll controla el tiempo del vídeo
-  // (codificado con todos los fotogramas clave para que avance fino) y al final hace zoom sobre la olla
-  let fromT = 0, scrubbing = false, rafSeek = 0, wantT = 0;
-  const seek = () => { rafSeek = 0; if (Math.abs(video.currentTime - wantT) > 0.02) video.currentTime = wantT; };
+  // al bajar, la cámara desciende por la torre de platos: el scroll controla el tiempo del vídeo
+  // (codificado con todos los fotogramas clave para que avance fino). El título se aparta, la foto
+  // se abre a pantalla completa y el último plato, granate, da paso a la sección de la tienda.
+  let rafSeek = 0, wantT = 0;
+  const seek = () => { rafSeek = 0; if (Math.abs(video.currentTime - wantT) > 0.01) video.currentTime = wantT; };
+  // iOS no deja mover un vídeo que nunca se ha reproducido: se arranca y se para en el primer fotograma
+  video.play().then(() => { video.pause(); video.currentTime = 0; }).catch(() => {});
   gsap.timeline({
+    defaults: { ease: 'none' },
     scrollTrigger: {
-      trigger: '.opwrap', start: 'top top', end: () => '+=' + window.innerHeight * 1.2, scrub: 0.6, invalidateOnRefresh: true,
+      trigger: '.opwrap', start: 'top top', end: () => '+=' + window.innerHeight * 3, scrub: 0.6, invalidateOnRefresh: true,
       onUpdate: (st) => {
-        const p = st.progress;
-        if (p > 0.002 && !scrubbing) { scrubbing = true; fromT = video.currentTime; video.pause(); }
-        if (p <= 0.002 && scrubbing) { scrubbing = false; video.currentTime = fromT; video.play().catch(() => {}); return; }
-        if (!scrubbing || !video.duration) return;
-        wantT = fromT + Math.min(1, p / 0.8) * (video.duration - 0.05 - fromT);
+        if (!video.duration) return;
+        wantT = Math.min(1, st.progress / 0.92) * (video.duration - 0.05);
         if (!rafSeek) rafSeek = requestAnimationFrame(seek);
       },
     },
   })
-    // valores de partida explícitos: sin ellos GSAP interpola desde "filter: none" y el vídeo salta a negro
-    .fromTo(video, { scale: 1, filter: 'brightness(1) saturate(1)' }, { scale: 1.12, filter: 'brightness(0.95) saturate(1.05)', ease: 'none', duration: 0.75, immediateRender: false }, 0)
-    .to(video, { scale: 1.45, filter: 'brightness(0.8) saturate(1.08)', ease: 'power2.in', duration: 0.25 }, 0.75) // zoom contenido: el vídeo es 1080p y más aumento lo emborrona
-    .fromTo(w1, { xPercent: 0 }, { xPercent: () => (mobile ? -40 : -70), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
-    .fromTo(w2, { xPercent: 0 }, { xPercent: () => (mobile ? 40 : 55), ease: 'power1.in', duration: 1, immediateRender: false }, 0)
-    .fromTo(amp, { scale: 1 }, { scale: 1.5, ease: 'none', duration: 1, immediateRender: false }, 0);
+    .fromTo(w1, { xPercent: 0 }, { xPercent: () => (mobile ? -60 : -80), ease: 'power1.in', duration: 0.22, immediateRender: false }, 0)
+    .fromTo(w2, { xPercent: 0 }, { xPercent: () => (mobile ? 60 : 70), ease: 'power1.in', duration: 0.22, immediateRender: false }, 0)
+    .fromTo(head, { yPercent: 0, opacity: 1 }, { yPercent: -30, opacity: 0, duration: 0.2, immediateRender: false }, 0.02)
+    .fromTo(photo, { clipPath: () => `inset(${headH()}px 0% 0% 0%)` }, { clipPath: 'inset(0px 0% 0% 0%)', ease: 'power2.inOut', duration: 0.22, immediateRender: false }, 0)
+    // el vídeo empieza centrado en el hueco bajo el título y vuelve al centro de la pantalla al abrirse
+    .fromTo(video, { y: () => headH() / 2 }, { y: 0, ease: 'power2.inOut', duration: 0.22, immediateRender: true }, 0)
+    .fromTo('.op__veil', { opacity: 0 }, { opacity: 1, duration: 0.08, immediateRender: false }, 0.92);
   gsap.fromTo('.dome__inner', { y: () => window.innerHeight * 0.12, opacity: 0 }, {
     y: 0, opacity: 1, ease: 'none',
     scrollTrigger: { trigger: '.dome', start: 'top bottom', end: 'top 35%', scrub: 0.5 },

@@ -70,6 +70,48 @@
      "en": "Aroma",
      "img": "p-tefal-aroma.webp",
      "desde": 29
+    },
+    {
+     "marca": "WMF",
+     "es": "Sartén Profi 20 cm",
+     "en": "Profi frying pan, 20 cm",
+     "img": "p-sartenes-wmf-sarten-profi-20-cm.webp",
+     "desde": 46
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Skillet de hierro fundido 26 cm",
+     "en": "Cast iron skillet, 26 cm",
+     "img": "p-sartenes-le-creuset-skillet-de-hierro-fundido-26.webp",
+     "desde": 135
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Parrilla rectangular 32 cm",
+     "en": "Rectangular grill pan, 32 cm",
+     "img": "p-sartenes-le-creuset-parrilla-rectangular-32-cm.webp",
+     "desde": 98
+    },
+    {
+     "marca": "Kuhn Rikon",
+     "es": "Sartén de acero 24 cm",
+     "en": "Steel frying pan, 24 cm",
+     "img": "p-sartenes-kuhn-rikon-sarten-de-acero-24-cm.webp",
+     "desde": 89
+    },
+    {
+     "marca": "Tefal",
+     "es": "Raclette Grill",
+     "en": "Raclette grill",
+     "img": "p-sartenes-tefal-raclette-grill.webp",
+     "desde": 74
+    },
+    {
+     "marca": "WMF",
+     "es": "Wok 36 cm con tapa de cristal",
+     "en": "Wok with glass lid, 36 cm",
+     "img": "p-sartenes-wmf-wok-36-cm-con-tapa-de-cristal.webp",
+     "desde": 65
     }
    ]
   },
@@ -107,6 +149,83 @@
      "en": "Stainless steel pots",
      "img": "p-kr-inox.webp",
      "desde": null
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Cocotte ovalada 29 cm",
+     "en": "Oval casserole, 29 cm",
+     "img": "p-ollas-le-creuset-cocotte-ovalada-29-cm.webp",
+     "desde": 315
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Cocotte Every",
+     "en": "Cocotte Every",
+     "img": "p-ollas-le-creuset-cocotte-every.webp",
+     "desde": 149
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Tajín 35 cm",
+     "en": "Tagine, 35 cm",
+     "img": "p-ollas-le-creuset-tajin-35-cm.webp",
+     "desde": 290
+    },
+    {
+     "marca": "WMF",
+     "es": "Perfect Plus, olla a presión 6,5 + 3 L",
+     "en": "Perfect Plus pressure cooker set, 6.5 + 3 L",
+     "img": "p-ollas-wmf-perfect-plus-olla-a-presion-6-5-3-l.webp",
+     "desde": 195
+    },
+    {
+     "marca": "WMF",
+     "es": "Batería Provence Plus, 5 piezas",
+     "en": "Provence Plus cookware set, 5 pieces",
+     "img": "p-ollas-wmf-bateria-provence-plus-5-piezas.webp",
+     "desde": 130
+    },
+    {
+     "marca": "WMF",
+     "es": "Batería Gourmet Plus, 5 piezas",
+     "en": "Gourmet Plus cookware set, 5 pieces",
+     "img": "p-ollas-wmf-bateria-gourmet-plus-5-piezas.webp",
+     "desde": 290
+    },
+    {
+     "marca": "WMF",
+     "es": "Olla Fusiontec 20 cm",
+     "en": "Fusiontec pot, 20 cm",
+     "img": "p-ollas-wmf-olla-fusiontec-20-cm.webp",
+     "desde": 145
+    },
+    {
+     "marca": "Silit",
+     "es": "Batería Silargan, 4 piezas",
+     "en": "Silargan cookware set, 4 pieces",
+     "img": "p-ollas-silit-bateria-silargan-4-piezas.webp",
+     "desde": 395
+    },
+    {
+     "marca": "Kuhn Rikon",
+     "es": "Durotherm, olla 5 L",
+     "en": "Durotherm pot, 5 L",
+     "img": "p-ollas-kuhn-rikon-durotherm-olla-5-l.webp",
+     "desde": 220
+    },
+    {
+     "marca": "Tefal",
+     "es": "Clipso Natura, olla a presión 6 L",
+     "en": "Clipso Natura pressure cooker, 6 L",
+     "img": "p-ollas-tefal-clipso-natura-olla-a-presion-6-l.webp",
+     "desde": 85
+    },
+    {
+     "marca": "WMF",
+     "es": "Olla para pasta 18 cm",
+     "en": "Pasta pot, 18 cm",
+     "img": "p-ollas-wmf-olla-para-pasta-18-cm.webp",
+     "desde": 45
     }
    ]
   },
@@ -151,6 +270,76 @@
      "en": "Enamel kettles",
      "img": "p-lc-hervidor.webp",
      "desde": null
+    },
+    {
+     "marca": "De'Longhi",
+     "es": "Dedica EC685",
+     "en": "Dedica EC685",
+     "img": "p-cafe-de-longhi-dedica-ec685.webp",
+     "desde": 170
+    },
+    {
+     "marca": "De'Longhi",
+     "es": "Magnifica S ECAM23.120.B",
+     "en": "Magnifica S ECAM23.120.B",
+     "img": "p-cafe-de-longhi-magnifica-s-ecam23-120-b.webp",
+     "desde": 455
+    },
+    {
+     "marca": "Nespresso",
+     "es": "Citiz",
+     "en": "Citiz",
+     "img": "p-cafe-nespresso-citiz.webp",
+     "desde": 149
+    },
+    {
+     "marca": "De'Longhi",
+     "es": "Nespresso Essenza Mini",
+     "en": "Nespresso Essenza Mini",
+     "img": "p-cafe-de-longhi-nespresso-essenza-mini.webp",
+     "desde": 75
+    },
+    {
+     "marca": "De'Longhi",
+     "es": "Alicia, cafetera eléctrica 6 tazas",
+     "en": "Alicia electric moka pot, 6 cups",
+     "img": "p-cafe-de-longhi-alicia-cafetera-electrica-6-ta.webp",
+     "desde": 69
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Tetera Kone 1,6 L",
+     "en": "Kone kettle, 1.6 L",
+     "img": "p-cafe-le-creuset-tetera-kone-1-6-l.webp",
+     "desde": 85
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Tetera Cloche 2,1 L",
+     "en": "Cloche kettle, 2.1 L",
+     "img": "p-cafe-le-creuset-tetera-cloche-2-1-l.webp",
+     "desde": 105
+    },
+    {
+     "marca": "WMF",
+     "es": "Stelio, cafetera de goteo 10 tazas",
+     "en": "Stelio drip coffee maker, 10 cups",
+     "img": "p-cafe-wmf-stelio-cafetera-de-goteo-10-tazas.webp",
+     "desde": 62
+    },
+    {
+     "marca": "Bialetti",
+     "es": "Rainbow 6 tazas",
+     "en": "Rainbow, 6 cups",
+     "img": "p-cafe-bialetti-rainbow-6-tazas.webp",
+     "desde": 37
+    },
+    {
+     "marca": "Zwilling",
+     "es": "Hervidor con silbato",
+     "en": "Whistling kettle",
+     "img": "p-cafe-zwilling-hervidor-con-silbato.webp",
+     "desde": 68
     }
    ]
   },
@@ -181,6 +370,90 @@
      "en": "Lightmix portable blender",
      "img": "p-mx-lightmix.webp",
      "desde": null
+    },
+    {
+     "marca": "Braun",
+     "es": "MultiQuick 5, batidora de mano",
+     "en": "MultiQuick 5 hand blender",
+     "img": "p-electro-braun-multiquick-5-batidora-de-mano.webp",
+     "desde": 37
+    },
+    {
+     "marca": "Kenwood",
+     "es": "kMix, robot de cocina",
+     "en": "kMix stand mixer",
+     "img": "p-electro-kenwood-kmix-robot-de-cocina.webp",
+     "desde": 320
+    },
+    {
+     "marca": "Kenwood",
+     "es": "MultiOne, robot de cocina",
+     "en": "MultiOne food processor",
+     "img": "p-electro-kenwood-multione-robot-de-cocina.webp",
+     "desde": 360
+    },
+    {
+     "marca": "WMF",
+     "es": "Kult X, batidora de vaso",
+     "en": "Kult X blender",
+     "img": "p-electro-wmf-kult-x-batidora-de-vaso.webp",
+     "desde": 39
+    },
+    {
+     "marca": "WMF",
+     "es": "Lono, tostador",
+     "en": "Lono toaster",
+     "img": "p-electro-wmf-lono-tostador.webp",
+     "desde": 147
+    },
+    {
+     "marca": "WMF",
+     "es": "KitchenMinis, arrocera",
+     "en": "KitchenMinis rice cooker",
+     "img": "p-electro-wmf-kitchenminis-arrocera.webp",
+     "desde": 86
+    },
+    {
+     "marca": "WMF",
+     "es": "Máquina de palomitas",
+     "en": "Popcorn maker",
+     "img": "p-electro-wmf-maquina-de-palomitas.webp",
+     "desde": 62
+    },
+    {
+     "marca": "WMF",
+     "es": "Cocedor de huevos",
+     "en": "Egg cooker",
+     "img": "p-electro-wmf-cocedor-de-huevos.webp",
+     "desde": 52
+    },
+    {
+     "marca": "Kenwood",
+     "es": "Extractor de zumo",
+     "en": "Juicer",
+     "img": "p-electro-kenwood-extractor-de-zumo.webp",
+     "desde": 205
+    },
+    {
+     "marca": "Moulinex",
+     "es": "Uno, freidora 1,8 L",
+     "en": "Uno deep fryer, 1.8 L",
+     "img": "p-electro-moulinex-uno-freidora-1-8-l.webp",
+     "desde": 47
+    },
+    {
+     "marca": "WMF",
+     "es": "KitchenMinis, fondue",
+     "en": "KitchenMinis fondue",
+     "img": "p-electro-wmf-kitchenminis-fondue.webp",
+     "desde": 98
+    },
+    {
+     "marca": "WMF",
+     "es": "Espumador de leche",
+     "en": "Milk frother",
+     "img": "p-electro-wmf-espumador-de-leche.webp",
+     "desde": 58
     }
    ]
   },
@@ -190,7 +463,113 @@
    "en": "Knives",
    "img": null,
    "articulos": 585,
-   "ejemplares": []
+   "ejemplares": [
+    {
+     "marca": "Arcos",
+     "es": "Santoku Natura",
+     "en": "Natura santoku",
+     "img": "p-cuchillos-arcos-santoku-natura.webp",
+     "desde": 37
+    },
+    {
+     "marca": "Arcos",
+     "es": "Cuchillo jamonero",
+     "en": "Ham knife",
+     "img": "p-cuchillos-arcos-cuchillo-jamonero.webp",
+     "desde": 25
+    },
+    {
+     "marca": "Arcos",
+     "es": "Kyoto, juego de 6 piezas",
+     "en": "Kyoto 6-piece knife set",
+     "img": "p-cuchillos-arcos-kyoto-juego-de-6-piezas.webp",
+     "desde": 290
+    },
+    {
+     "marca": "Arcos",
+     "es": "Cuchillo usuba 175 mm",
+     "en": "Usuba knife, 175 mm",
+     "img": "p-cuchillos-arcos-cuchillo-usuba-175-mm.webp",
+     "desde": 37
+    },
+    {
+     "marca": "Arcos",
+     "es": "Cuchillo deba 170 mm",
+     "en": "Deba knife, 170 mm",
+     "img": "p-cuchillos-arcos-cuchillo-deba-170-mm.webp",
+     "desde": 42
+    },
+    {
+     "marca": "Arcos",
+     "es": "Cuchillo cocinero 210 mm",
+     "en": "Chef’s knife, 210 mm",
+     "img": "p-cuchillos-arcos-cuchillo-cocinero-210-mm.webp",
+     "desde": 35
+    },
+    {
+     "marca": "Arcos",
+     "es": "Juego de cuchillos, 5 piezas",
+     "en": "Knife set, 5 pieces",
+     "img": "p-cuchillos-arcos-juego-de-cuchillos-5-piezas.webp",
+     "desde": 120
+    },
+    {
+     "marca": "WMF",
+     "es": "Grand Gourmet, juego de 6 piezas",
+     "en": "Grand Gourmet 6-piece set",
+     "img": "p-cuchillos-wmf-grand-gourmet-juego-de-6-piezas.webp",
+     "desde": 330
+    },
+    {
+     "marca": "WMF",
+     "es": "Grand Gourmet, 2 cuchillos asiáticos",
+     "en": "Grand Gourmet 2 Asian knives",
+     "img": "p-cuchillos-wmf-grand-gourmet-2-cuchillos-asiaticos.webp",
+     "desde": 164
+    },
+    {
+     "marca": "WMF",
+     "es": "Kineo, juego de cuchillos",
+     "en": "Kineo knife set",
+     "img": "p-cuchillos-wmf-kineo-juego-de-cuchillos.webp",
+     "desde": 160
+    },
+    {
+     "marca": "WMF",
+     "es": "Afilador Diamant",
+     "en": "Diamant sharpener",
+     "img": "p-cuchillos-wmf-afilador-diamant.webp",
+     "desde": 33
+    },
+    {
+     "marca": "Kuhn Rikon",
+     "es": "Colori, cuchillo con funda",
+     "en": "Colori knife with sheath",
+     "img": "p-cuchillos-kuhn-rikon-colori-cuchillo-con-funda.webp",
+     "desde": 12
+    },
+    {
+     "marca": "Kuhn Rikon",
+     "es": "Cuchillo de chef cerámico",
+     "en": "Ceramic chef’s knife",
+     "img": "p-cuchillos-kuhn-rikon-cuchillo-de-chef-ceramico.webp",
+     "desde": 48
+    },
+    {
+     "marca": "Joseph Joseph",
+     "es": "Elevate, juego de cuchillos de bambú",
+     "en": "Elevate bamboo knife set",
+     "img": "p-cuchillos-joseph-joseph-elevate-juego-de-cuchillos.webp",
+     "desde": 125
+    },
+    {
+     "marca": "Kuhn Rikon",
+     "es": "Cuchillo Ulu",
+     "en": "Ulu knife",
+     "img": "p-cuchillos-kuhn-rikon-cuchillo-ulu.webp",
+     "desde": 17.5
+    }
+   ]
   },
   {
    "id": "utensilios",
@@ -282,6 +661,27 @@
      "en": "Drawer organisers",
      "img": "p-jj-cajon.webp",
      "desde": null
+    },
+    {
+     "marca": "Lékué",
+     "es": "Palomitero para microondas",
+     "en": "Microwave popcorn maker",
+     "img": "p-utensilios-lekue-palomitero-para-microondas.webp",
+     "desde": 21
+    },
+    {
+     "marca": "WMF",
+     "es": "Báscula de cocina",
+     "en": "Kitchen scale",
+     "img": "p-utensilios-wmf-bascula-de-cocina.webp",
+     "desde": 32
+    },
+    {
+     "marca": "Lékué",
+     "es": "Quinoa & Rice Cooker",
+     "en": "Quinoa & Rice Cooker",
+     "img": "p-utensilios-lekue-quinoa-rice-cooker.webp",
+     "desde": 25
     }
    ]
   },
@@ -319,6 +719,83 @@
      "en": "Veggie Burger",
      "img": "p-lk-veggieburger.webp",
      "desde": 9
+    },
+    {
+     "marca": "Kaiser",
+     "es": "Molde desmontable 26 cm",
+     "en": "Springform pan, 26 cm",
+     "img": "p-reposteria-kaiser-molde-desmontable-26-cm.webp",
+     "desde": 15
+    },
+    {
+     "marca": "Kaiser",
+     "es": "Molde Bundt Twist 25 cm",
+     "en": "Bundt Twist pan, 25 cm",
+     "img": "p-reposteria-kaiser-molde-bundt-twist-25-cm.webp",
+     "desde": 25
+    },
+    {
+     "marca": "Kaiser",
+     "es": "Molde rectangular",
+     "en": "Loaf pan",
+     "img": "p-reposteria-kaiser-molde-rectangular.webp",
+     "desde": 22
+    },
+    {
+     "marca": "Kaiser",
+     "es": "Molde para baguettes",
+     "en": "Baguette tray",
+     "img": "p-reposteria-kaiser-molde-para-baguettes.webp",
+     "desde": 13.5
+    },
+    {
+     "marca": "Lékué",
+     "es": "Molde Savarin 22 cm",
+     "en": "Savarin mould, 22 cm",
+     "img": "p-reposteria-lekue-molde-savarin-22-cm.webp",
+     "desde": 14
+    },
+    {
+     "marca": "Lékué",
+     "es": "Molde para quiche 28 cm",
+     "en": "Quiche mould, 28 cm",
+     "img": "p-reposteria-lekue-molde-para-quiche-28-cm.webp",
+     "desde": 12
+    },
+    {
+     "marca": "Lékué",
+     "es": "Mini Brownies",
+     "en": "Mini Brownies mould",
+     "img": "p-reposteria-lekue-mini-brownies.webp",
+     "desde": 13.8
+    },
+    {
+     "marca": "Lékué",
+     "es": "Bread Rolls",
+     "en": "Bread Rolls mould",
+     "img": "p-reposteria-lekue-bread-rolls.webp",
+     "desde": 16
+    },
+    {
+     "marca": "Lékué",
+     "es": "Molde de donuts",
+     "en": "Doughnut mould",
+     "img": "p-reposteria-lekue-molde-de-donuts.webp",
+     "desde": 12
+    },
+    {
+     "marca": "Lékué",
+     "es": "Tapete para macarons",
+     "en": "Macaron baking mat",
+     "img": "p-reposteria-lekue-tapete-para-macarons.webp",
+     "desde": 18
+    },
+    {
+     "marca": "Kaiser",
+     "es": "Molde de rosco 26 cm",
+     "en": "Ring cake pan, 26 cm",
+     "img": "p-reposteria-kaiser-molde-de-rosco-26-cm.webp",
+     "desde": 20
     }
    ]
   },
@@ -349,6 +826,90 @@
      "en": "Japanese-style bowls",
      "img": "p-tokyo.webp",
      "desde": null
+    },
+    {
+     "marca": "WMF",
+     "es": "Frutero",
+     "en": "Fruit bowl",
+     "img": "p-vajilla-wmf-frutero.webp",
+     "desde": 29
+    },
+    {
+     "marca": "WMF",
+     "es": "Juego de ensalada, 3 piezas",
+     "en": "Salad set, 3 pieces",
+     "img": "p-vajilla-wmf-juego-de-ensalada-3-piezas.webp",
+     "desde": 55
+    },
+    {
+     "marca": "WMF",
+     "es": "2 tazas de capuchino",
+     "en": "2 cappuccino cups",
+     "img": "p-vajilla-wmf-2-tazas-de-capuchino.webp",
+     "desde": 17.5
+    },
+    {
+     "marca": "WMF",
+     "es": "Taza latte macchiato 0,2 L",
+     "en": "Latte macchiato cup, 0.2 L",
+     "img": "p-vajilla-wmf-taza-latte-macchiato-0-2-l.webp",
+     "desde": 16
+    },
+    {
+     "marca": "WMF",
+     "es": "Fuente de servir 36 × 28 cm",
+     "en": "Serving platter, 36 × 28 cm",
+     "img": "p-vajilla-wmf-fuente-de-servir-36-28-cm.webp",
+     "desde": 33
+    },
+    {
+     "marca": "WMF",
+     "es": "Cuenco de ensalada",
+     "en": "Salad bowl",
+     "img": "p-vajilla-wmf-cuenco-de-ensalada.webp",
+     "desde": 22.7
+    },
+    {
+     "marca": "Silit",
+     "es": "Fuente de asado ovalada",
+     "en": "Oval roasting dish",
+     "img": "p-vajilla-silit-fuente-de-asado-ovalada.webp",
+     "desde": 143
+    },
+    {
+     "marca": "Lékué",
+     "es": "Bol de cereales",
+     "en": "Cereal bowl",
+     "img": "p-vajilla-lekue-bol-de-cereales.webp",
+     "desde": 16.5
+    },
+    {
+     "marca": "Kuhn Rikon",
+     "es": "Fuente de horno 2 L",
+     "en": "Baking dish, 2 L",
+     "img": "p-vajilla-kuhn-rikon-fuente-de-horno-2-l.webp",
+     "desde": 22
+    },
+    {
+     "marca": "WMF",
+     "es": "Juego para tarta, 2 piezas",
+     "en": "Cake server set, 2 pieces",
+     "img": "p-vajilla-wmf-juego-para-tarta-2-piezas.webp",
+     "desde": 16.5
+    },
+    {
+     "marca": "WMF",
+     "es": "2 tazas de café crema",
+     "en": "2 café crema cups",
+     "img": "p-vajilla-wmf-2-tazas-de-cafe-crema.webp",
+     "desde": 17.5
+    },
+    {
+     "marca": "WMF",
+     "es": "Cubiertos de ensalada",
+     "en": "Salad servers",
+     "img": "p-vajilla-wmf-cubiertos-de-ensalada.webp",
+     "desde": 19
     }
    ]
   },
@@ -358,7 +919,113 @@
    "en": "Cutlery",
    "img": null,
    "articulos": 242,
-   "ejemplares": []
+   "ejemplares": [
+    {
+     "marca": "WMF",
+     "es": "Dune, 66 piezas",
+     "en": "Dune, 66 pieces",
+     "img": "p-cuberteria-wmf-dune-66-piezas.webp",
+     "desde": 175
+    },
+    {
+     "marca": "WMF",
+     "es": "Boston Dark, 24 piezas",
+     "en": "Boston Dark, 24 pieces",
+     "img": "p-cuberteria-wmf-boston-dark-24-piezas.webp",
+     "desde": 145
+    },
+    {
+     "marca": "WMF",
+     "es": "Boston Gold, 24 piezas",
+     "en": "Boston Gold, 24 pieces",
+     "img": "p-cuberteria-wmf-boston-gold-24-piezas.webp",
+     "desde": 145
+    },
+    {
+     "marca": "WMF",
+     "es": "Philadelphia, 45 piezas",
+     "en": "Philadelphia, 45 pieces",
+     "img": "p-cuberteria-wmf-philadelphia-45-piezas.webp",
+     "desde": 80
+    },
+    {
+     "marca": "WMF",
+     "es": "Palermo, 60 piezas",
+     "en": "Palermo, 60 pieces",
+     "img": "p-cuberteria-wmf-palermo-60-piezas.webp",
+     "desde": 140
+    },
+    {
+     "marca": "WMF",
+     "es": "Alteo, 60 piezas",
+     "en": "Alteo, 60 pieces",
+     "img": "p-cuberteria-wmf-alteo-60-piezas.webp",
+     "desde": 165
+    },
+    {
+     "marca": "WMF",
+     "es": "Budapest, 60 piezas",
+     "en": "Budapest, 60 pieces",
+     "img": "p-cuberteria-wmf-budapest-60-piezas.webp",
+     "desde": 140
+    },
+    {
+     "marca": "WMF",
+     "es": "Stelio Gold, 30 piezas",
+     "en": "Stelio Gold, 30 pieces",
+     "img": "p-cuberteria-wmf-stelio-gold-30-piezas.webp",
+     "desde": 249
+    },
+    {
+     "marca": "WMF",
+     "es": "Palma, 66 piezas",
+     "en": "Palma, 66 pieces",
+     "img": "p-cuberteria-wmf-palma-66-piezas.webp",
+     "desde": 175
+    },
+    {
+     "marca": "WMF",
+     "es": "Atria, 60 piezas",
+     "en": "Atria, 60 pieces",
+     "img": "p-cuberteria-wmf-atria-60-piezas.webp",
+     "desde": 150
+    },
+    {
+     "marca": "WMF",
+     "es": "Premiere, 66 piezas",
+     "en": "Premiere, 66 pieces",
+     "img": "p-cuberteria-wmf-premiere-66-piezas.webp",
+     "desde": 480
+    },
+    {
+     "marca": "WMF",
+     "es": "Miami, 60 piezas",
+     "en": "Miami, 60 pieces",
+     "img": "p-cuberteria-wmf-miami-60-piezas.webp",
+     "desde": 115
+    },
+    {
+     "marca": "WMF",
+     "es": "Nuova, palillos asiáticos",
+     "en": "Nuova chopsticks",
+     "img": "p-cuberteria-wmf-nuova-palillos-asiaticos.webp",
+     "desde": 20
+    },
+    {
+     "marca": "WMF",
+     "es": "Denver, 114 piezas",
+     "en": "Denver, 114 pieces",
+     "img": "p-cuberteria-wmf-denver-114-piezas.webp",
+     "desde": 325
+    },
+    {
+     "marca": "WMF",
+     "es": "Verona, 66 piezas",
+     "en": "Verona, 66 pieces",
+     "img": "p-cuberteria-wmf-verona-66-piezas.webp",
+     "desde": 260
+    }
+   ]
   },
   {
    "id": "cristaleria",
@@ -366,7 +1033,113 @@
    "en": "Glassware & wine",
    "img": "cat-cristaleria.webp",
    "articulos": 322,
-   "ejemplares": []
+   "ejemplares": [
+    {
+     "marca": "WMF",
+     "es": "Set sommelier",
+     "en": "Sommelier set",
+     "img": "p-cristaleria-wmf-set-sommelier.webp",
+     "desde": 50
+    },
+    {
+     "marca": "WMF",
+     "es": "Decantador",
+     "en": "Decanter",
+     "img": "p-cristaleria-wmf-decantador.webp",
+     "desde": 39
+    },
+    {
+     "marca": "WMF",
+     "es": "6 copas de champán",
+     "en": "6 champagne flutes",
+     "img": "p-cristaleria-wmf-6-copas-de-champan.webp",
+     "desde": 49
+    },
+    {
+     "marca": "WMF",
+     "es": "Copas de vino 450 ml",
+     "en": "Wine glasses, 450 ml",
+     "img": "p-cristaleria-wmf-copas-de-vino-450-ml.webp",
+     "desde": 55
+    },
+    {
+     "marca": "WMF",
+     "es": "6 vasos de whisky",
+     "en": "6 whisky tumblers",
+     "img": "p-cristaleria-wmf-6-vasos-de-whisky.webp",
+     "desde": 36
+    },
+    {
+     "marca": "WMF",
+     "es": "Enfriador de vino",
+     "en": "Wine cooler",
+     "img": "p-cristaleria-wmf-enfriador-de-vino.webp",
+     "desde": 68
+    },
+    {
+     "marca": "Zwilling",
+     "es": "Set sommelier, 4 piezas",
+     "en": "Sommelier set, 4 pieces",
+     "img": "p-cristaleria-zwilling-set-sommelier-4-piezas.webp",
+     "desde": 82
+    },
+    {
+     "marca": "Zwilling",
+     "es": "Sorrento, 2 vasos de doble pared",
+     "en": "Sorrento, 2 double-wall glasses",
+     "img": "p-cristaleria-zwilling-sorrento-2-vasos-de-doble-pared.webp",
+     "desde": 16.5
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "4 copas de vino tinto",
+     "en": "4 red wine glasses",
+     "img": "p-cristaleria-le-creuset-4-copas-de-vino-tinto.webp",
+     "desde": 65
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Sacacorchos de palanca",
+     "en": "Lever corkscrew",
+     "img": "p-cristaleria-le-creuset-sacacorchos-de-palanca.webp",
+     "desde": 65
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Decantador Vitesse",
+     "en": "Vitesse decanter",
+     "img": "p-cristaleria-le-creuset-decantador-vitesse.webp",
+     "desde": 57
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Funda enfriadora de botella",
+     "en": "Bottle cooler sleeve",
+     "img": "p-cristaleria-le-creuset-funda-enfriadora-de-botella.webp",
+     "desde": 25
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Bomba de vacío",
+     "en": "Vacuum wine pump",
+     "img": "p-cristaleria-le-creuset-bomba-de-vacio.webp",
+     "desde": 26
+    },
+    {
+     "marca": "Zwilling",
+     "es": "Sacacorchos de camarero",
+     "en": "Waiter’s corkscrew",
+     "img": "p-cristaleria-zwilling-sacacorchos-de-camarero.webp",
+     "desde": 27
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "4 copas de champán",
+     "en": "4 champagne flutes",
+     "img": "p-cristaleria-le-creuset-4-copas-de-champan.webp",
+     "desde": 45
+    }
+   ]
   },
   {
    "id": "termos",
@@ -395,6 +1168,90 @@
      "en": "Twin",
      "img": "p-bbottles-twin.webp",
      "desde": null
+    },
+    {
+     "marca": "Alfi",
+     "es": "Pallas, termo 1 L",
+     "en": "Pallas vacuum jug, 1 L",
+     "img": "p-termos-alfi-pallas-termo-1-l.webp",
+     "desde": 85
+    },
+    {
+     "marca": "Alfi",
+     "es": "isoBottle 0,5 L",
+     "en": "isoBottle, 0.5 L",
+     "img": "p-termos-alfi-isobottle-0-5-l.webp",
+     "desde": 28
+    },
+    {
+     "marca": "Alfi",
+     "es": "Jarra termo",
+     "en": "Vacuum jug",
+     "img": "p-termos-alfi-jarra-termo.webp",
+     "desde": 46
+    },
+    {
+     "marca": "WMF",
+     "es": "Kineo, jarra termo 1 L",
+     "en": "Kineo vacuum jug, 1 L",
+     "img": "p-termos-wmf-kineo-jarra-termo-1-l.webp",
+     "desde": 92
+    },
+    {
+     "marca": "WMF",
+     "es": "Termo para sólidos 700 ml",
+     "en": "Food flask, 700 ml",
+     "img": "p-termos-wmf-termo-para-solidos-700-ml.webp",
+     "desde": 29
+    },
+    {
+     "marca": "WMF",
+     "es": "Botella térmica 0,75 L",
+     "en": "Insulated bottle, 0.75 L",
+     "img": "p-termos-wmf-botella-termica-0-75-l.webp",
+     "desde": 22
+    },
+    {
+     "marca": "WMF",
+     "es": "Termo de viaje 0,3 L",
+     "en": "Travel mug, 0.3 L",
+     "img": "p-termos-wmf-termo-de-viaje-0-3-l.webp",
+     "desde": 15
+    },
+    {
+     "marca": "Lékué",
+     "es": "Botella isotérmica 500 ml",
+     "en": "Insulated bottle, 500 ml",
+     "img": "p-termos-lekue-botella-isotermica-500-ml.webp",
+     "desde": 18
+    },
+    {
+     "marca": "Lacor",
+     "es": "Jarra termo esférica 1,25 L",
+     "en": "Round vacuum jug, 1.25 L",
+     "img": "p-termos-lacor-jarra-termo-esferica-1-25-l.webp",
+     "desde": 38
+    },
+    {
+     "marca": "Le Creuset",
+     "es": "Botella isotérmica 1 L",
+     "en": "Insulated bottle, 1 L",
+     "img": "p-termos-le-creuset-botella-isotermica-1-l.webp",
+     "desde": 38
+    },
+    {
+     "marca": "Alfi",
+     "es": "Termo para comida 0,5 L",
+     "en": "Food flask, 0.5 L",
+     "img": "p-termos-alfi-termo-para-comida-0-5-l.webp",
+     "desde": 19
+    },
+    {
+     "marca": "Alfi",
+     "es": "Termo 1 L",
+     "en": "Vacuum flask, 1 L",
+     "img": "p-termos-alfi-termo-1-l.webp",
+     "desde": 55
     }
    ]
   },
@@ -432,6 +1289,83 @@
      "en": "Shopping trolley",
      "img": "p-playmarket.webp",
      "desde": null
+    },
+    {
+     "marca": "De'Longhi",
+     "es": "Centro de planchado Pro 1100",
+     "en": "Pro 1100 steam generator iron",
+     "img": "p-hogar-de-longhi-centro-de-planchado-pro-1100.webp",
+     "desde": 120
+    },
+    {
+     "marca": "Braun",
+     "es": "TexStyle 7, plancha de vapor",
+     "en": "TexStyle 7 steam iron",
+     "img": "p-hogar-braun-texstyle-7-plancha-de-vapor.webp",
+     "desde": 52
+    },
+    {
+     "marca": "Bosch",
+     "es": "Sensixx B5, plancha de vapor",
+     "en": "Sensixx B5 steam iron",
+     "img": "p-hogar-bosch-sensixx-b5-plancha-de-vapor.webp",
+     "desde": 90
+    },
+    {
+     "marca": "Brabantia",
+     "es": "Cubo de pedal 20 L",
+     "en": "Pedal bin, 20 L",
+     "img": "p-hogar-brabantia-cubo-de-pedal-20-l.webp",
+     "desde": 62
+    },
+    {
+     "marca": "Brabantia",
+     "es": "Tendedero",
+     "en": "Drying rack",
+     "img": "p-hogar-brabantia-tendedero.webp",
+     "desde": 79
+    },
+    {
+     "marca": "Brabantia",
+     "es": "Escurreplatos",
+     "en": "Dish drying rack",
+     "img": "p-hogar-brabantia-escurreplatos.webp",
+     "desde": 49
+    },
+    {
+     "marca": "Joseph Joseph",
+     "es": "Tabla de planchar Pocket",
+     "en": "Pocket ironing board",
+     "img": "p-hogar-joseph-joseph-tabla-de-planchar-pocket.webp",
+     "desde": 132
+    },
+    {
+     "marca": "Joseph Joseph",
+     "es": "Titan, compactador de basura",
+     "en": "Titan trash compactor",
+     "img": "p-hogar-joseph-joseph-titan-compactador-de-basur.webp",
+     "desde": 175
+    },
+    {
+     "marca": "Joseph Joseph",
+     "es": "Tota, cesto de ropa 60 L",
+     "en": "Tota laundry basket, 60 L",
+     "img": "p-hogar-joseph-joseph-tota-cesto-de-ropa-60-l.webp",
+     "desde": 89
+    },
+    {
+     "marca": "Lacor",
+     "es": "Envasadora al vacío Home",
+     "en": "Home vacuum sealer",
+     "img": "p-hogar-lacor-envasadora-al-vacio-home.webp",
+     "desde": 67
+    },
+    {
+     "marca": "De'Longhi",
+     "es": "Radiador de aceite",
+     "en": "Oil-filled radiator",
+     "img": "p-hogar-de-longhi-radiador-de-aceite.webp",
+     "desde": 175
     }
    ]
   },
@@ -462,6 +1396,90 @@
      "en": "Electric toothbrushes",
      "img": "p-oralb.webp",
      "desde": null
+    },
+    {
+     "marca": "Braun",
+     "es": "Series 5, afeitadora",
+     "en": "Series 5 shaver",
+     "img": "p-cuidado-braun-series-5-afeitadora.webp",
+     "desde": 80
+    },
+    {
+     "marca": "Braun",
+     "es": "Series 3, afeitadora",
+     "en": "Series 3 shaver",
+     "img": "p-cuidado-braun-series-3-afeitadora.webp",
+     "desde": 81
+    },
+    {
+     "marca": "Braun",
+     "es": "Silk-épil 9 SensoSmart",
+     "en": "Silk-épil 9 SensoSmart",
+     "img": "p-cuidado-braun-silk-epil-9-sensosmart.webp",
+     "desde": 145
+    },
+    {
+     "marca": "Oral-B",
+     "es": "Genius X",
+     "en": "Genius X",
+     "img": "p-cuidado-oral-b-genius-x.webp",
+     "desde": 160
+    },
+    {
+     "marca": "Oral-B",
+     "es": "Genius 10000N",
+     "en": "Genius 10000N",
+     "img": "p-cuidado-oral-b-genius-10000n.webp",
+     "desde": 220
+    },
+    {
+     "marca": "Oral-B",
+     "es": "Irrigador OxyJet",
+     "en": "OxyJet oral irrigator",
+     "img": "p-cuidado-oral-b-irrigador-oxyjet.webp",
+     "desde": 80
+    },
+    {
+     "marca": "Braun",
+     "es": "Cruzer 5, recortadora",
+     "en": "Cruzer 5 trimmer",
+     "img": "p-cuidado-braun-cruzer-5-recortadora.webp",
+     "desde": 54
+    },
+    {
+     "marca": "Braun",
+     "es": "Series X XT5",
+     "en": "Series X XT5",
+     "img": "p-cuidado-braun-series-x-xt5.webp",
+     "desde": 50
+    },
+    {
+     "marca": "Zwilling",
+     "es": "Twin, cortaúñas",
+     "en": "Twin nail clipper",
+     "img": "p-cuidado-zwilling-twin-cortaunas.webp",
+     "desde": 38
+    },
+    {
+     "marca": "Tefal",
+     "es": "Báscula Body Signal",
+     "en": "Body Signal scale",
+     "img": "p-cuidado-tefal-bascula-body-signal.webp",
+     "desde": 58
+    },
+    {
+     "marca": "Braun",
+     "es": "Silk-épil Xpressive",
+     "en": "Silk-épil Xpressive",
+     "img": "p-cuidado-braun-silk-epil-xpressive.webp",
+     "desde": 85
+    },
+    {
+     "marca": "Oral-B",
+     "es": "Vitality Pro",
+     "en": "Vitality Pro",
+     "img": "p-cuidado-oral-b-vitality-pro.webp",
+     "desde": 19.5
     }
    ]
   },
@@ -478,6 +1496,104 @@
      "en": "Kids’ bottles & lunch boxes",
      "img": "p-infantil.webp",
      "desde": null
+    },
+    {
+     "marca": "WMF",
+     "es": "Vajilla infantil Safari, 7 piezas",
+     "en": "Safari kids’ tableware, 7 pieces",
+     "img": "p-infantil-wmf-vajilla-infantil-safari-7-piezas.webp",
+     "desde": 33
+    },
+    {
+     "marca": "WMF",
+     "es": "Vajilla infantil Nemo, 7 piezas",
+     "en": "Nemo kids’ tableware, 7 pieces",
+     "img": "p-infantil-wmf-vajilla-infantil-nemo-7-piezas.webp",
+     "desde": 35
+    },
+    {
+     "marca": "WMF",
+     "es": "Set infantil Cars, 6 piezas",
+     "en": "Cars kids’ set, 6 pieces",
+     "img": "p-infantil-wmf-set-infantil-cars-6-piezas.webp",
+     "desde": 40
+    },
+    {
+     "marca": "WMF",
+     "es": "Set infantil Mickey",
+     "en": "Mickey kids’ set",
+     "img": "p-infantil-wmf-set-infantil-mickey.webp",
+     "desde": 55
+    },
+    {
+     "marca": "WMF",
+     "es": "Set infantil Winnie the Pooh",
+     "en": "Winnie the Pooh kids’ set",
+     "img": "p-infantil-wmf-set-infantil-winnie-the-pooh.webp",
+     "desde": 45
+    },
+    {
+     "marca": "WMF",
+     "es": "Vajilla infantil El Rey León",
+     "en": "The Lion King kids’ tableware",
+     "img": "p-infantil-wmf-vajilla-infantil-el-rey-leon.webp",
+     "desde": 55
+    },
+    {
+     "marca": "WMF",
+     "es": "Vajilla infantil Unicornio",
+     "en": "Unicorn kids’ tableware",
+     "img": "p-infantil-wmf-vajilla-infantil-unicornio.webp",
+     "desde": 45
+    },
+    {
+     "marca": "WMF",
+     "es": "Set infantil Patrulla Canina",
+     "en": "Paw Patrol kids’ set",
+     "img": "p-infantil-wmf-set-infantil-patrulla-canina.webp",
+     "desde": 45
+    },
+    {
+     "marca": "WMF",
+     "es": "Set infantil Princesa Anneli",
+     "en": "Princess Anneli kids’ set",
+     "img": "p-infantil-wmf-set-infantil-princesa-anneli.webp",
+     "desde": 45
+    },
+    {
+     "marca": "WMF",
+     "es": "Set infantil Abeja Maya",
+     "en": "Maya the Bee kids’ set",
+     "img": "p-infantil-wmf-set-infantil-abeja-maya.webp",
+     "desde": 45
+    },
+    {
+     "marca": "WMF",
+     "es": "Set infantil Farmily",
+     "en": "Farmily kids’ set",
+     "img": "p-infantil-wmf-set-infantil-farmily.webp",
+     "desde": 45
+    },
+    {
+     "marca": "Zwilling",
+     "es": "Cubiertos Hello Kitty",
+     "en": "Hello Kitty kids’ cutlery",
+     "img": "p-infantil-zwilling-cubiertos-hello-kitty.webp",
+     "desde": 27
+    },
+    {
+     "marca": "Oral-B",
+     "es": "Cepillo eléctrico infantil Mickey",
+     "en": "Mickey kids’ electric toothbrush",
+     "img": "p-infantil-oral-b-cepillo-electrico-infantil-mickey.webp",
+     "desde": 26
+    },
+    {
+     "marca": "Alfi",
+     "es": "Botella infantil 0,35 L",
+     "en": "Kids’ bottle, 0.35 L",
+     "img": "p-infantil-alfi-botella-infantil-0-35-l.webp",
+     "desde": 16
     }
    ]
   }
