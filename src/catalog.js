@@ -3,7 +3,7 @@
 // Al pulsar "Ver productos" se abre el panel con los productos ejemplares.
 import data from './data/categorias.json';
 import { t, getLang, onLang, price, number } from './i18n.js';
-import { WHATSAPP } from './config.js';
+import { WHATSAPP, waLink } from './config.js';
 
 const BASE = import.meta.env.BASE_URL;
 const cats = data.categorias;
@@ -107,6 +107,19 @@ export function initCatalog({ gsap, ScrollTrigger, lenis, openSearch, reduced })
   });
   scroller.querySelector('[data-cat-open]').addEventListener('click', (e) => openPanel(active, e.currentTarget));
 
+  // ---------- Rejilla de acceso directo: un clic abre la sección ----------
+  const grid = document.querySelector('[data-cat-grid]');
+  const renderGrid = () => {
+    grid.innerHTML = cats.map((c, i) => `
+      <li><button type="button" class="tile" data-tile="${i}">
+        <span class="tile__img"><img src="${BASE}img/cat/${c.id}.webp" alt="" loading="lazy" decoding="async" /></span>
+        <span class="tile__name">${c[getLang()]}</span>
+        <span class="tile__count">${t('cat.count', { n: number(c.articulos) })}</span>
+      </button></li>`).join('');
+  };
+  renderGrid();
+  grid.addEventListener('click', (e) => { const b = e.target.closest('[data-tile]'); if (b) openPanel(Number(b.dataset.tile), b); });
+
   // ---------- Panel de productos ----------
   const panel = document.querySelector('[data-panel]');
   const pTitle = panel.querySelector('[data-panel-title]');
@@ -119,7 +132,7 @@ export function initCatalog({ gsap, ScrollTrigger, lenis, openSearch, reduced })
     const searchBtn = `<button type="button" class="link" data-search-cat="${i}"><span>${t('sheet.buscarCat', { cat: c[L].toLowerCase() })}</span><i class="ph-light ph-arrow-right" aria-hidden="true"></i></button>`;
     if (!c.ejemplares.length) {
       pBody.innerHTML = `<div class="panel__empty"><p>${t('sheet.empty', { n: number(c.articulos) })}</p>${searchBtn}
-        <a class="link" href="${WHATSAPP}" target="_blank" rel="noopener"><span>WhatsApp</span><i class="ph-light ph-arrow-up-right" aria-hidden="true"></i></a></div>`;
+        <a class="link" href="${waLink(t('wa.seccion', { s: c[L].toLowerCase() }))}" target="_blank" rel="noopener"><span>${t('sheet.wa')}</span><i class="ph-light ph-arrow-up-right" aria-hidden="true"></i></a></div>`;
       return;
     }
     pBody.innerHTML = `<div class="grid">${c.ejemplares.map((p, k) => `
@@ -128,7 +141,7 @@ export function initCatalog({ gsap, ScrollTrigger, lenis, openSearch, reduced })
         ${p.marca ? `<p class="product__brand">${p.marca}</p>` : '<p class="product__brand">&nbsp;</p>'}
         <h4 class="product__name">${p[L]}</h4>
         ${p.desde ? `<p class="product__price">${t('sheet.desde')} ${price(p.desde)}</p>` : ''}
-        <a class="product__wa" href="${WHATSAPP}" target="_blank" rel="noopener" aria-label="${t('sheet.wa')}"><i class="ph-light ph-whatsapp-logo" aria-hidden="true"></i></a>
+        <a class="product__wa" href="${waLink(t('wa.producto', { p: (p.marca ? p.marca + ' ' : '') + p[L] }))}" target="_blank" rel="noopener" aria-label="${t('sheet.wa')}"><i class="ph-light ph-whatsapp-logo" aria-hidden="true"></i></a>
       </article>`).join('')}</div>
       <div class="panel__foot"><span>${t('sheet.more')}</span>${searchBtn}</div>`;
   }
@@ -160,6 +173,7 @@ export function initCatalog({ gsap, ScrollTrigger, lenis, openSearch, reduced })
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closePanel(); });
 
   onLang(() => {
+    renderGrid();
     indexBtns.forEach((b, i) => { b.textContent = cats[i][getLang()]; });
     setActive(active, true);
     if (current >= 0) renderPanel(current);

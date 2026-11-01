@@ -1,6 +1,12 @@
 // Textos de la web en español (por defecto) e inglés.
 const DICT = {
   es: {
+    "wa.producto": "Hola, quería preguntar por: {p}",
+    "wa.seccion": "Hola, quería preguntar por artículos de {s}.",
+    "wa.buscar": "Hola, ¿tenéis «{q}»?",
+    "bar.buscar": "Buscar",
+    "bar.secciones": "Secciones",
+    "bar.llegar": "Llegar",
     "op.tag": "Menaje, cocina<br />y hogar en Ceuta",
     "op.addr": "Calle Solís, 4<br />más de 30 años abiertos",
     "op.cta": "Ver catálogo",
@@ -11,7 +17,7 @@ const DICT = {
     "tienda.ribbon": "Variedad de productos / Variedad de precios / Un trato de casa / Variedad de productos / Variedad de precios / Un trato de casa",
     "catalogo.eyebrow": "El catálogo",
     "catalogo.title": "Catorce secciones, más de 13.000 artículos",
-    "catalogo.lead": "Desliza para recorrer la tienda. Pulsa una sección para ver sus productos.",
+    "catalogo.lead": "Elige una sección para ver sus productos, o sigue deslizando para recorrer la tienda.",
     "catalogo.buscar": "Buscar un artículo concreto",
     "cat.ver": "Ver productos",
     "cat.count": "{n} artículos en tienda",
@@ -74,6 +80,12 @@ const DICT = {
     prev: 'Anterior', next: 'Siguiente',
   },
   en: {
+    "wa.producto": "Hello, I would like to ask about: {p}",
+    "wa.seccion": "Hello, I would like to ask about your {s}.",
+    "wa.buscar": "Hello, do you have “{q}”?",
+    "bar.buscar": "Search",
+    "bar.secciones": "Sections",
+    "bar.llegar": "Directions",
     "op.tag": "Cookware, kitchen<br />& home in Ceuta",
     "op.addr": "Calle Solís 4<br />open for over 30 years",
     "op.cta": "Browse catalogue",
@@ -84,7 +96,7 @@ const DICT = {
     "tienda.ribbon": "A wide range of products / A wide range of prices / Friendly, personal service / A wide range of products / A wide range of prices / Friendly, personal service",
     "catalogo.eyebrow": "The catalogue",
     "catalogo.title": "Fourteen sections, over 13,000 items",
-    "catalogo.lead": "Scroll to walk through the shop. Tap a section to see its products.",
+    "catalogo.lead": "Pick a section to see its products, or keep scrolling to walk through the shop.",
     "catalogo.buscar": "Search for a specific item",
     "cat.ver": "See products",
     "cat.count": "{n} items in store",

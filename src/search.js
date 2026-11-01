@@ -1,6 +1,7 @@
 // Buscador sobre el listado completo (se descarga solo cuando se abre).
 import data from './data/categorias.json';
 import { t, getLang, onLang, price, number } from './i18n.js';
+import { waLink } from './config.js';
 
 const cats = data.categorias;
 const fold = (s) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/ñ/g, 'n');
@@ -60,7 +61,7 @@ export function initSearch({ lenis, reduced }) {
     const tokens = fold(q).split(/\s+/).filter(Boolean);
     if (!tokens.length && cat < 0) { results.innerHTML = `<p class="search__msg">${t('search.hint')}</p>`; return; }
     const hits = index.filter((it) => (cat < 0 || it.c === cat) && tokens.every((tk) => it.f.includes(tk)));
-    if (!hits.length) { results.innerHTML = `<p class="search__msg">${t('search.none', { q: esc(q) })}</p>`; return; }
+    if (!hits.length) { results.innerHTML = `<div class="search__msg"><p>${t('search.none', { q: esc(q) })}</p><a class="btn" href="${waLink(t('wa.buscar', { q }))}" target="_blank" rel="noopener"><i class="ph-light ph-whatsapp-logo" aria-hidden="true"></i><span>${t('sheet.wa')}</span></a></div>`; return; }
     // primero los que empiezan por la búsqueda
     if (tokens[0]) hits.sort((a, b) => (b.f.startsWith(tokens[0]) - a.f.startsWith(tokens[0])));
     const L = getLang();
@@ -70,6 +71,7 @@ export function initSearch({ lenis, reduced }) {
           <p class="result__name">${highlight(it.n, tokens)}</p>
           <p class="result__meta">${[cats[it.c]?.[L], it.s].filter(Boolean).map(esc).join(' · ')}</p>
           <p class="result__price">${it.m ? t('sheet.desde') + ' ' : ''}${price(it.p)}</p>
+          <a class="result__wa" href="${waLink(t('wa.producto', { p: it.n }))}" target="_blank" rel="noopener" aria-label="${t('sheet.wa')}: ${esc(it.n)}"><i class="ph-light ph-whatsapp-logo" aria-hidden="true"></i></a>
         </div>`).join('') +
       (hits.length > limit ? `<div style="padding:12px 14px"><button type="button" class="btn btn--glass btn--sm" data-more>${t('search.more')}</button></div>` : '');
   }

@@ -8,3 +8,7 @@ export const LEGAL = { aviso: '', privacidad: '', cookies: '' };
 
 export const PHONE = '+34956512987';
 export const WHATSAPP = 'https://wa.me/34956512987';
+export const MAPS = 'https://www.google.com/maps/search/?api=1&query=Calle%20Sol%C3%ADs%204%2C%2051001%20Ceuta';
+
+// Enlace de WhatsApp con el mensaje ya escrito (el cliente puede editarlo antes de enviarlo)
+export const waLink = (text) => (text ? `${WHATSAPP}?text=${encodeURIComponent(text)}` : WHATSAPP);

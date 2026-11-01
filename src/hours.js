@@ -74,6 +74,9 @@ export function initHours() {
     st.classList.toggle('is-open', s.open);
     st.classList.toggle('is-closed', !s.open);
     if (el.dataset.seen) el.classList.add('is-in');
+    // estado también en el inicio
+    const op = document.querySelector('[data-op-status]');
+    if (op) { op.querySelector('[data-op-status-text]').textContent = s.text; op.classList.toggle('is-open', s.open); op.classList.toggle('is-closed', !s.open); }
   }
   render();
   setInterval(render, 60_000);

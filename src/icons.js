@@ -1,7 +1,7 @@
 // Iconos Phosphor (trazo light) como SVG en línea: solo se incluyen los que usa la web.
 // En el HTML se escriben como <i class="ph-light ph-nombre"></i> y aquí se rellenan.
 const light = import.meta.glob(
-  '/node_modules/@phosphor-icons/core/assets/light/{phone,arrow-down,arrow-up-right,magnifying-glass,caret-left,caret-right,whatsapp-logo,facebook-logo,calendar-dots,plus,x,star,google-logo}-light.svg',
+  '/node_modules/@phosphor-icons/core/assets/light/{phone,arrow-down,arrow-up-right,magnifying-glass,caret-left,caret-right,whatsapp-logo,facebook-logo,calendar-dots,plus,x,star,google-logo,squares-four,map-pin,arrow-right}-light.svg',
   { query: '?raw', import: 'default', eager: true },
 );
 const fill = import.meta.glob('/node_modules/@phosphor-icons/core/assets/fill/play-fill.svg', { query: '?raw', import: 'default', eager: true });

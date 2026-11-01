@@ -93,9 +93,12 @@
           <span class="op__w op__w--2">Cocina</span>
         </h1>
         <div class="op__meta">
-          <p class="op__tag" data-i18n-html="op.tag">Menaje, cocina<br />y hogar en Ceuta</p>
+          <div class="op__left">
+            <p class="op__tag" data-i18n-html="op.tag">Menaje, cocina<br />y hogar en Ceuta</p>
+            <p class="op__status" data-op-status><span class="status__dot" aria-hidden="true"></span><span data-op-status-text></span><a class="op__go" href="https://www.google.com/maps/search/?api=1&amp;query=Calle%20Sol%C3%ADs%204%2C%2051001%20Ceuta" target="_blank" rel="noopener"><span data-i18n="contacto.comoLlegar">Cómo llegar</span><i class="ph-light ph-arrow-up-right" aria-hidden="true"></i></a></p>
+          </div>
           <div class="op__right">
-            <p class="op__tag op__tag--r" data-i18n-html="op.addr">Calle Solís, 4<br />desde hace más de 30 años</p>
+            <p class="op__tag op__tag--r" data-i18n-html="op.addr">Calle Solís, 4<br />más de 30 años abiertos</p>
             <div class="op__ctas">
               <a class="btn" href="#catalogo" data-i18n="op.cta">Ver catálogo</a>
               <a class="link" href="tel:+34956512987" data-i18n="op.call">Llamar al 956 51 29 87</a>
@@ -128,6 +131,11 @@
         <p class="cat__lead" data-i18n="catalogo.lead">Desliza para recorrer la tienda. Pulsa una sección para ver sus productos.</p>
         <button type="button" class="link" data-open-search><span data-i18n="catalogo.buscar">Buscar un artículo concreto</span><i class="ph-light ph-arrow-right" aria-hidden="true"></i></button>
       </header>
+
+      <!-- Acceso directo a las 14 secciones -->
+      <div class="cat__grid-wrap" id="secciones">
+        <ul class="cat__grid" data-cat-grid role="list"></ul>
+      </div>
 
       <div class="cat__scroller" data-cat-scroller>
         <div class="cat__stage" data-cat-stage>
@@ -245,6 +253,14 @@
       <p class="footer__copy">© <span data-year>2026</span> Casa &amp; Cocina</p>
     </div>
   </footer>
+
+  <!-- Barra rápida en móvil -->
+  <nav class="tabbar" aria-label="Accesos rápidos">
+    <button type="button" data-open-search><i class="ph-light ph-magnifying-glass" aria-hidden="true"></i><span data-i18n="bar.buscar">Buscar</span></button>
+    <a href="#secciones"><i class="ph-light ph-squares-four" aria-hidden="true"></i><span data-i18n="bar.secciones">Secciones</span></a>
+    <a href="https://wa.me/34956512987" target="_blank" rel="noopener"><i class="ph-light ph-whatsapp-logo" aria-hidden="true"></i><span>WhatsApp</span></a>
+    <a href="https://www.google.com/maps/search/?api=1&amp;query=Calle%20Sol%C3%ADs%204%2C%2051001%20Ceuta" target="_blank" rel="noopener"><i class="ph-light ph-map-pin" aria-hidden="true"></i><span data-i18n="bar.llegar">Llegar</span></a>
+  </nav>
 
   <!-- Productos de una sección -->
   <div class="panel" data-panel hidden>
